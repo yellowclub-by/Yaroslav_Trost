@@ -35,6 +35,10 @@ async def addresses(message: types.Message):
     await message.answer("Наши адреса: ", reply_markup=reply.adres_kb)
 
 
+@user_router.message(F.text.lower() == "назад")
+async def back_home(message: types.Message):
+    await message.answer("Главное меню", reply_markup=reply.start_kb)
+
 
 
 # @user_router.message(F.text)

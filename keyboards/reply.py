@@ -18,16 +18,20 @@ start_kb = ReplyKeyboardMarkup(
 
 )
 
+back_btn = KeyboardButton(text="Назад")
+
 menu_kb = ReplyKeyboardMarkup(
     keyboard=[
         [
             KeyboardButton(text="С говядиной"),
             KeyboardButton(text="С курицой")
         ],
-
         [
             KeyboardButton(text="С колбасой"),
             KeyboardButton(text="Вегетарианскай")
+        ],
+        [
+            back_btn
         ]
     ],
     resize_keyboard=True,
@@ -44,6 +48,9 @@ contact_kb = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Работник = +375293333333"),
             KeyboardButton(text="Курьер = +375294444444")
+        ],
+        [
+            back_btn
         ]
     ],
     resize_keyboard=True,
@@ -60,8 +67,12 @@ adres_kb = ReplyKeyboardMarkup(
         [
             KeyboardButton(text="Третий домик"),
             KeyboardButton(text="Четвертый денег")
+        ],
+        [
+            back_btn
         ]
     ],
     resize_keyboard=True,
     input_field_placeholder="Привет"
 )
+
